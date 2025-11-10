@@ -11,12 +11,13 @@
 }
 
 /* HERO */
-.dp-hero{
-  position:relative; overflow:hidden;
-  background:radial-gradient(1200px 800px at 75% 30%, #0c0d10 0%, #050506 70%, #000 100%);
-  min-height:min(92vh, 1100px);
-  display:grid; place-items:center;
-  border-bottom:1px solid var(--line);
+.dp-hero{ position:relative; --gutter: max(16px, (100vw - var(--container))/2); }
+.dp-hero__art{
+  position:absolute; top:50%;
+  right: var(--gutter);           /* ⇐ привързване към контейнера */
+  transform: translateY(-42%);    /* леко изместване нагоре */
+  width: min(56vw, 1100px);
+  height: auto; pointer-events:none; user-select:none;
 }
 .dp-hero__bg{
   position:absolute; inset:0; z-index:0;
@@ -93,6 +94,12 @@
 
 /* Мобилен layout — текстът е водещ; спиралата остава фон, не „избутва“ съдържанието */
 @media (max-width: 860px){
+  .dp-hero__art{
+    right: 8px;
+    width: min(125vw, 900px);
+    transform: translateY(-38%);
+    opacity:.9;
+  }
   .dp-hero__content {
     margin-left: 6vw; /* леко изместване вляво */
     padding-top: clamp(28px, 8vw, 64px);
