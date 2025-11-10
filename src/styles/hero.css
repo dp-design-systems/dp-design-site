@@ -18,22 +18,27 @@
   border-bottom:1px solid var(--line);
 }
 .dp-hero__bg{
-  /* беше: right 7% center */
-  background-position: right 4% center;   /* по-близо до десния ръб */
-  background-size: min(56vw, 1100px);     /* малко по-компактна */
+  position:absolute; inset:0; z-index:0;
+  background:
+    url("/assets/images/spiral.png") right 7% center / min(58vw, 1100px) no-repeat;
+  filter:saturate(1.05) contrast(1.05);
+  opacity:.96;
 }
 .dp-hero__content{
-  /* беше: display:flex; flex-direction:column; gap:... */
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;      /* ⇐ ново: ляв ръб */
-  text-align:left;             /* ⇐ ново */
+  position:relative; z-index:1;
+  width:var(--container);
+  display:flex; flex-direction:column; gap: clamp(14px, 2vw, 22px);
+  padding: clamp(28px, 5vw, 72px) 0;
 }
 
 /* Титла: A/D/P с различни визуални тежести */
 .dp-hero__title{
-  margin:0; line-height:1.05; letter-spacing:-0.02em;
-  display:flex; flex-direction:column; gap: clamp(4px, .6vw, 8px);
+  margin: 0;
+  line-height:1.05;
+  letter-spacing:-0.02em;
+  display:flex;
+  flex-direction:column;
+  gap: clamp(4px, .6vw, 8px);
 }
 .dp-hero__title .line{display:block; font-weight:800}
 .dp-hero__title .line--a{
@@ -77,20 +82,15 @@
 .dp-hero__scroll:hover{opacity:1}
 
 /* Мобилен layout — текстът е водещ; спиралата остава фон, не „избутва“ съдържанието */
-
-  @media (max-width: 860px){
-  .dp-hero{min-height:82vh}
+@media (max-width: 860px){
+  .dp-hero{
+    min-height:82vh
+  }
   .dp-hero__bg{
-    background-position: 135% 45%;        /* ⇐ още по-вдясно */
-    background-size: min(125vw, 900px);   /* малко по-голяма, но извън текста */
+    background-position:right 95% center;
+    background-size: min(120vw, 900px);
     opacity:.9;
   }
-  .dp-hero__content{
-    padding-top: clamp(28px, 8vw, 64px);
-    align-items:flex-start;               /* подсигурява ляво подравняване */
-    text-align:left;
-  }
-}
   .dp-hero__lead{max-width:100%}
 }
 
