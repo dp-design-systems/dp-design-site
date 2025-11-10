@@ -1,35 +1,85 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>DP Design</title>
-    <style>
-      body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:0;padding:0;background:#0c0c0d;color:#e6e6e6}
-      header,footer{padding:24px 16px}
-      header{background:#111218}
-      main{padding:24px 16px;max-width:980px;margin:0 auto}
-      .card{background:#171820;border-radius:16px;padding:20px;margin:12px 0;border:1px solid #23242f}
-      a{color:#ffd24a}
-      .muted{color:#9aa0aa}
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>DP Design</h1>
-      <p class="muted">Engineering & Digital Solutions</p>
-    </header>
-    <main>
-      <section class="card">
-        <h2>DP Design Pilot</h2>
-        <p>Automation platform for CAD, Drawings, and Manufacturing docs.</p>
-        <p><a href="#">Open Demo</a> · <a href="#">Read Docs</a></p>
-      </section>
-      <section class="card">
-        <h2>Contact</h2>
-        <p>Email: info@dpdesign.tools</p>
-      </section>
-    </main>
-    <footer><small class="muted">© DP Design</small></footer>
-  </body>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DP Design — Automation. Precision. Design.</title>
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body class="theme-dark">
+  <!-- Full-bleed HERO -->
+  <header class="hero">
+    <div class="hero__bg" role="img" aria-label="Abstract DP spiral"></div>
+    <div class="container hero__content">
+      <img class="brand" src="/assets/logo.svg" alt="DP Design" />
+      <h1>
+        <span>Automation.</span><br/>
+        <span>Precision.</span><br/>
+        <span>Design.</span>
+      </h1>
+      <p class="lead">Software for engineers who build smarter.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="/products/pilot.html">Explore DP Design Pilot</a>
+        <a class="btn btn-ghost" href="/about.html">Защо DP Design</a>
+      </div>
+    </div>
+    <!-- декоративен графитен pattern в краищата -->
+    <div class="edges edges--left"></div>
+    <div class="edges edges--right"></div>
+  </header>
+
+  <!-- Продукти -->
+  <section class="section">
+    <div class="container">
+      <div class="cards">
+        <article class="card">
+          <h3>DP Design Pilot</h3>
+          <p>Модулна CAD автоматизация. Inventor / SolidWorks интеграции.</p>
+          <a href="/products/pilot.html" class="link">Научи повече</a>
+        </article>
+        <article class="card">
+          <h3>DXF Exporter PRO</h3>
+          <p>Интелигентен DXF/PDF експорт от чертежи с правила и логове.</p>
+          <a href="/products/exporter.html" class="link">Научи повече</a>
+        </article>
+        <article class="card">
+          <h3>DWG Manager</h3>
+          <p>Централно управление на DWG/PDF превюта и партиди.</p>
+          <a href="/products/dwgmanager.html" class="link">Научи повече</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Защо DP Design -->
+  <section class="section section--alt">
+    <div class="container benefits">
+      <div class="benefit">
+        <h4>Автоматизация на процеси</h4>
+        <p>Часове работа → минути с устойчиви правила.</p>
+      </div>
+      <div class="benefit">
+        <h4>Дълбока интеграция</h4>
+        <p>Inventor &amp; SolidWorks. Локално или през облак.</p>
+      </div>
+      <div class="benefit">
+        <h4>Създадено за мащаб</h4>
+        <p>Модулност, кешове, опашки, логове, наблюдаемост.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <small>© 2025 DP Design</small>
+      <nav class="footer__nav">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+</body>
 </html>
