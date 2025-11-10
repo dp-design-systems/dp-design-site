@@ -58,7 +58,7 @@ a{color:inherit; text-decoration:none}
 .hero__bg{
   position:absolute; inset:0; z-index:1;
   background:
-    url("/assets/spiral.png") right 10% center / min(55vw,1100px) no-repeat,
+    url("/assets/images/spiral.png") right 10% center / min(55vw,1100px) no-repeat,
     radial-gradient(1000px 700px at 85% 25%, #0c0d10 0%, transparent 60%) ,
     radial-gradient(900px 600px at 10% 80%, #0a0b0e 0%, transparent 55%);
   filter: saturate(1.05) contrast(1.05);
