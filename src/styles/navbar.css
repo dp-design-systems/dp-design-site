@@ -36,10 +36,10 @@
 .dp-search{display:flex; align-items:center; gap:10px}
 .dp-search__form{display:block}
 .dp-search input{
-  width:min(42vw, 400px);
+  width:min(42vw, 200px);
   background:var(--bg-graphite); color:var(--text);
   border:1px solid var(--border); border-radius:8px;
-  padding:10px 12px; outline:none;
+  padding:5px 10px; outline:none;
 }
 .dp-search input::placeholder{color:var(--muted)}
 /* лупа по дефиниция е скрита на десктоп */
@@ -113,7 +113,7 @@
 .dp-drawer[hidden]{display:none}
 
 /* RESPONSIVE BEHAVIOUR */
-@media (max-width: 920px){
+@media (max-width: 620px){
   .dp-search__form{display:none}          /* скриваме input */
   .dp-search-icon{display:flex}           /* показваме лупа */
 }
