@@ -7,6 +7,7 @@
   --container:clamp(320px, 92vw, 1440px);
   --line:#1a1a1d;
   --radius:18px;
+  --gutter: clamp(16px, (100vw - var(--container)) / 2, 120px);
 }
 
 /* HERO */
