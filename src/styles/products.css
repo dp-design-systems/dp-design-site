@@ -12,9 +12,10 @@
 }
 
 .dp-cards{
-  display:grid; gap: clamp(16px, 2vw, 28px);
-  /* Десктоп: хоризонтално; Мобилно: автоматично става една колона */
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  width:var(--container);
+  margin:0 auto;
+  display:grid;
+  gap: clamp(16px, 2vw, 28px);
 }
 
 /* Карта */
@@ -69,7 +70,7 @@
 /* overlay върху картата */
 .dp-card__overlay{
   position:absolute; inset:0; display:grid; place-items:end start;
-  background: radial-gradient(110% 140% at 80% 50%, rgba(0,0,0,.0) 0%, rgba(0,0,0,.7) 100%);
+  background: radial-gradient(110% 140% at 80% 50%, rgba(0,0,0,.0) 0%, rgba(0,0,0,.3) 100%);
   backdrop-filter: blur(2px);
 }
 .dp-card__overlay[hidden]{ display:none }
@@ -112,8 +113,20 @@
   border-color:#2a2a2f;
 }
 
-/* мобилно: една колона, арт отдолу */
-@media (max-width: 780px){
-  .dp-card__body{ grid-template-columns: 1fr }
-  .dp-card__art{ order:3 }
+/* ≤ 779px → 1 колона */
+@media (max-width: 779px){
+  .dp-cards{ grid-template-columns: 1fr; }
 }
+
+/* 780–1199px → 2 колони */
+@media (min-width: 780px) and (max-width: 1199px){
+  .dp-cards{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ≥ 1200px → 3 колони (насилваме три, без auto-fit капризи) */
+@media (min-width: 1200px){
+  .dp-cards{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* важно, за да не раздува колоната заради вътрешно съдържание */
+.dp-card{ min-width: 0; }
