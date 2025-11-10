@@ -22,9 +22,9 @@
 .dp-hero__bg{
   position:absolute; inset:0; z-index:0;
   background:
-    url("/assets/images/spiral.png") right 7% center / min(58vw, 1100px) no-repeat;
+   /* url("/assets/images/spiral.png") right 7% center / min(58vw, 1100px) no-repeat;
   filter:saturate(1.05) contrast(1.05);
-  opacity:.96;
+  opacity:.96;*/
 }
 .dp-hero__content{
   position: relative;
@@ -95,9 +95,9 @@
 /* Мобилен layout — текстът е водещ; спиралата остава фон, не „избутва“ съдържанието */
 @media (max-width: 860px){
   .dp-hero__art{
-    right: 8px;
-    width: min(125vw, 900px);
-    transform: translateY(-38%);
+    left: -3px;
+    width: min(125vw, 800px);
+    transform: translateY(-48%);
     opacity:.9;
   }
   .dp-hero__content {
