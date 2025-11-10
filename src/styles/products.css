@@ -70,7 +70,7 @@
 /* overlay върху картата */
 .dp-card__overlay{
   position:absolute; inset:0; display:grid; place-items:end start;
-  background: radial-gradient(110% 140% at 80% 50%, rgba(0,0,0,.0) 0%, rgba(0,0,0,.3) 100%);
+  background: radial-gradient(110% 140% at 80% 50%, rgba(0,0,0,80%) 0%, rgba(0,0,0,80%) 100%);
   backdrop-filter: blur(2px);
 }
 .dp-card__overlay[hidden]{ display:none }
