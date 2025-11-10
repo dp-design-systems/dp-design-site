@@ -1,18 +1,19 @@
-<!-- DP Design – Header (2-редици) -->
+<!-- DP Design – Header (2 реда, responsive, sticky) -->
 <div class="dp-header">
   <!-- TOP BAR -->
   <div class="dp-topbar" role="navigation" aria-label="Utility">
-    <div class="dp-container">
+    <div class="dp-container dp-topbar__row">
+      <!-- Лого винаги най-вляво -->
       <a class="dp-logo" href="/" aria-label="DP Design Home">
         <img src="/assets/logo/logo.svg" alt="DP Design" />
       </a>
 
+      <!-- Търсене: desktop = input, mobile = иконка (клик -> prompt/overlay) -->
       <div class="dp-search">
-        <form action="/search" method="get" role="search" aria-label="Site search">
+        <form action="/search" method="get" role="search" aria-label="Site search" class="dp-search__form">
           <input name="q" type="search" placeholder="search" aria-label="Search" />
         </form>
-        <button class="dp-search-icon" aria-label="Open search" hidden>
-          <!-- simple loupe -->
+        <button class="dp-search-icon" aria-label="Open search">
           <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
             <path fill="currentColor"
               d="M10 2a8 8 0 1 1 5.293 13.707l4 4a1 1 0 0 1-1.414 1.414l-4-4A8 8 0 0 1 10 2zm0 2a6 6 0 1 0 0 12A6 6 0 0 0 10 4z"/>
@@ -20,6 +21,10 @@
         </button>
       </div>
 
+      <!-- празен флекс спейсер за да бутне езиците вдясно -->
+      <div class="dp-flex-spacer" aria-hidden="true"></div>
+
+      <!-- Езици вдясно -->
       <div class="dp-lang" role="group" aria-label="Language switch">
         <button class="dp-lang-btn is-active" data-lang="EN" type="button">EN</button>
         <span class="dp-lang-sep">/</span>
@@ -30,21 +35,23 @@
 
   <!-- MAIN BAR -->
   <div class="dp-mainbar" role="navigation" aria-label="Primary">
-    <div class="dp-container">
+    <div class="dp-container dp-mainbar__row">
       <nav class="dp-primary">
         <a href="/pages/products/index.html">Products</a>
         <a href="/pages/contact.html">Contacts</a>
       </nav>
 
-      <button class="dp-burger" aria-expanded="false" aria-controls="dp-mobile-menu" aria-label="Open menu">
+      <!-- Burger се вижда само на мобилно -->
+      <button class="dp-burger" aria-expanded="false" aria-controls="dp-drawer" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
-
-    <!-- Mobile dropdown -->
-    <nav id="dp-mobile-menu" class="dp-mobile" hidden>
-      <a href="/pages/products/index.html">Products</a>
-      <a href="/pages/contact.html">Contacts</a>
-    </nav>
   </div>
+
+  <!-- Mobile overlay + drawer -->
+  <div class="dp-overlay" data-close="drawer" hidden></div>
+  <nav id="dp-drawer" class="dp-drawer" hidden>
+    <a href="/pages/products/index.html">Products</a>
+    <a href="/pages/contact.html">Contacts</a>
+  </nav>
 </div>
