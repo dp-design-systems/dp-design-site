@@ -25,7 +25,7 @@
   border-bottom:1px solid var(--border);
 }
 .dp-topbar__row{
-  height:60px; justify-content:flex-start;
+  height:40px; justify-content:flex-start;
 }
 .dp-logo img{
   height:36px; /* по-голямо лого */
@@ -36,7 +36,7 @@
 .dp-search{display:flex; align-items:center; gap:10px}
 .dp-search__form{display:block}
 .dp-search input{
-  width:min(42vw, 520px);
+  width:min(42vw, 400px);
   background:var(--bg-graphite); color:var(--text);
   border:1px solid var(--border); border-radius:8px;
   padding:10px 12px; outline:none;
@@ -65,7 +65,7 @@
   border-bottom:1px solid var(--border);
 }
 .dp-mainbar__row{
-  height:56px; justify-content:space-between;
+  height:40px; justify-content:space-between;
 }
 .dp-primary{display:flex; align-items:center; gap:24px}
 .dp-primary a{
