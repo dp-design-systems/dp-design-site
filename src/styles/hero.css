@@ -14,7 +14,7 @@
 .dp-hero{ position:relative; --gutter: max(16px, (100vw - var(--container))/2); }
 .dp-hero__art{
   position:absolute; top:50%;
-  right: -5%;           /* ⇐ привързване към контейнера */
+  right: 5%;           /* ⇐ привързване към контейнера */
   transform: translateY(-42%);    /* леко изместване нагоре */
   width: auto;
   height: min(70vw, 1000px); pointer-events:none; user-select:none;
