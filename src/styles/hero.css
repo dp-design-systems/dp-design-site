@@ -108,7 +108,7 @@
   }
   .dp-hero__content {
     margin-left: 6vw; /* леко изместване вляво */
-    padding-top: clamp(28px, 8vw, 64px);
+    padding-top: clamp(180px, 8vw, 64px);
   }
   .dp-hero{
     min-height:70vh
