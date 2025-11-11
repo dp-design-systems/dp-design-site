@@ -1,100 +1,153 @@
-<section class="dp-products" id="products">
-  <div class="dp-container">
-    <div class="dp-cards">
-      <!-- 1) DP Design Pilot -->
-      <article class="dp-card" data-link="/pages/products/pilot.html">
-        <div class="dp-card__body">
-          <div class="dp-card__icon">
-            <!-- <img src="/assets/images/pilot-outline.png" alt="" aria-hidden="true">-->
-          </div>
-          <div class="dp-card__text">
-            <h3 class="dp-card__title">DP Design Pilot</h3>
-            <p class="dp-card__desc">
-              Modular platform for generating complete design documentation with precision and control.
-            </p>
-          </div>
-          <div class="dp-card__art">
-            <img src="../assets/images/pilot-outline.png" alt="" aria-hidden="true">
-          </div>
-        </div>
+:root{
+  --bg:#000; --graph:#0b0b0d; --text:#e9e9ea; --muted:#a7a7ad; --line:#1a1a1d;
+  --accent:#d4ff00; --container:clamp(320px, 92vw, 1440px); --radius:18px;
+}
 
-        <!-- overlay вътре в картата -->
-        <div class="dp-card__overlay" hidden>
-          <div class="dp-card__overlay-inner">
-            <button class="dp-card__close" aria-label="Close">×</button>
-            <h4>DP Design Pilot</h4>
-            <ul class="dp-card__bullets">
-              <li>Inventor-driven modules, versioned rules</li>
-              <li>GLB/DXF/PDF pipelines, caching & queues</li>
-              <li>Multi-tenant ready, controlled by schema</li>
-            </ul>
-            <a class="btn btn-primary dp-card__overlay-cta" href="/pages/products/pilot.html">Learn more</a>
-          </div>
-        </div>
-      </article>
+.dp-products{ padding: clamp(36px, 6vw, 96px) 0; background:linear-gradient(180deg,#000,#050507)}
+.dp-container{ width:var(--container); margin:0 auto }
+.dp-products__title{
+  width:var(--container); margin:0 auto clamp(20px,2.8vw,32px);
+  font:800 clamp(20px,2.4vw,28px)/1.1 Inter,system-ui,sans-serif; letter-spacing:-.02em;
+  color:#e9e9ea;
+}
 
-      <!-- 2) DP Smart Assembly -->
-      <article class="dp-card" data-link="/pages/products/assembly.html">
-        <div class="dp-card__body">
-          <div class="dp-card__icon">
-            <!-- <img src="./assets/images/robot-arm-outline.png" alt="" aria-hidden="true">-->
-          </div>
-          <div class="dp-card__text">
-            <h3 class="dp-card__title">DP Smart Assembly</h3>
-            <p class="dp-card__desc">
-              Engineering consultancy for slot-based assemblies and robotic welding integration.
-            </p>
-          </div>
-          <div class="dp-card__art">
-            <img src="../assets/images/robot-arm-outline.png" alt="" aria-hidden="true">
-          </div>
-        </div>
+.dp-cards{
+  width:var(--container);
+  margin:0 auto;
+  display:grid;
+  gap: clamp(16px, 2vw, 28px);
+}
 
-        <div class="dp-card__overlay" hidden>
-          <div class="dp-card__overlay-inner">
-            <button class="dp-card__close" aria-label="Close">×</button>
-            <h4>DP Smart Assembly</h4>
-            <ul class="dp-card__bullets">
-              <li>Slot-ready strategies & fixturing</li>
-              <li>Welding sequence logic & QA checkpoints</li>
-              <li>Shop-floor adoption playbooks</li>
-            </ul>
-            <a class="btn btn-primary dp-card__overlay-cta" href="/pages/products/assembly.html">Learn more</a>
-          </div>
-        </div>
-      </article>
 
-      <!-- 3) DP Tools -->
-      <article class="dp-card" data-link="/pages/products/tools.html">
-        <div class="dp-card__body">
-          <div class="dp-card__icon">
-            <!-- <img src="/assets/images/tools-outline.png" alt="" aria-hidden="true">-->
-          </div>
-          <div class="dp-card__text">
-            <h3 class="dp-card__title">DP Tools</h3>
-            <p class="dp-card__desc">
-              Work smart, not hard. A suite of CAD extensions for faster, more precise design workflows.
-            </p>
-          </div>
-          <div class="dp-card__art">
-            <img src="../assets/images/tools-outline.png" alt="" aria-hidden="true">
-          </div>
-        </div>
+/* ===== Карти – основа ===== */
+.dp-card{
+  position:relative;
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  background:linear-gradient(180deg, #0b0b0e, #070709);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.02),
+    inset 0 -18px 42px rgba(0,0,0,.25);
+  overflow:hidden;                     /* за hover изнасяне ползваме тъмен halo, не реален overflow */
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  cursor:pointer;
+  min-height: clamp(200px, 26vw, 240px);     /* ⇐ еднаква визуална височина */
+}
+.dp-card:hover{
+  transform: translateY(-3px);
+  box-shadow:
+    0 14px 36px rgba(0,0,0,.35),
+    inset 0 0 0 1px rgb(255 255 255 / 3%);
+  border-color:#232327;
+}
 
-        <div class="dp-card__overlay" hidden>
-          <div class="dp-card__overlay-inner">
-            <button class="dp-card__close" aria-label="Close">×</button>
-            <h4>DP Tools</h4>
-            <ul class="dp-card__bullets">
-              <li>DXF Exporter PRO (sheet-metal aware)</li>
-              <li>PDF Exporter PRO (DWG to print packs)</li>
-              <li>Inventor & SolidWorks add-ins</li>
-            </ul>
-            <a class="btn btn-primary dp-card__overlay-cta" href="/pages/products/tools.html">Learn more</a>
-          </div>
-        </div>
-      </article>
+/* ===== Тяло – лява иконна зона / десен текст ===== */
+.dp-card__body{
+  display:grid;
+  grid-template-columns: 34% 1fr;           /* ⇐ иконна зона ≈ 1/3 */
+  align-items:center;
+  gap: clamp(12px, 1.6vw, 20px);
+  padding: clamp(18px, 2.2vw, 28px);
+}
 
-    </div>
-  </div>
-</section>
+.dp-card__icon svg{ width:22px; height:22px; color:var(--accent); opacity:.9 }
+/* Текстов блок */
+.dp-card__text{
+  display:grid; gap:10px; align-content:center;
+}
+.dp-card__title{
+  margin:0;
+  font:700 clamp(18px,1.9vw,22px)/1.15 Inter,system-ui,sans-serif;
+  letter-spacing:-.01em; color:var(--text);
+}
+.dp-card__desc{
+  margin:0; color:var(--muted);
+  font-size: clamp(14px,1.2vw,16px);
+}
+.dp-card__art img{
+  height: clamp(86px, 12vw, 140px); width:auto; opacity:.9;
+  filter: drop-shadow(0 10px 24px rgba(140,140,150,.22));
+  translate: 6px 0;
+}
+.dp-card__actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:6px }
+.btn{
+  display:inline-block; border-radius:999px; border:1px solid var(--line);
+  padding:10px 16px; color:#e9e9ea; background:transparent; text-decoration:none; font-weight:600;
+}
+.btn-primary{
+  border-color: color-mix(in oklab, var(--accent), #fff 8%);
+  background:linear-gradient(180deg, color-mix(in oklab, var(--accent), #fff 6%) 0%, var(--accent) 100%);
+  color:#061102;
+}
+.btn-ghost:hover{ border-color:#2a2a2f }
+
+/* Арт вдясно (контур в акцентни цветове) */
+.dp-card__art img{
+  height: clamp(306px, 12vw, 140px); width:auto; opacity:.9;
+  filter: drop-shadow(0 10px 24px rgb(112 112 130 / 0%));
+  translate: 6px 0;
+}
+
+/* overlay върху картата */
+.dp-card__overlay{
+  position:absolute; inset:0; display:grid; place-items:end start;
+  background: radial-gradient(110% 140% at 80% 50%, rgba(0,0,0,80%) 0%, rgba(0,0,0,80%) 100%);
+  backdrop-filter: blur(2px);
+}
+.dp-card__overlay[hidden]{ display:none }
+.dp-card__overlay-inner{
+  width:100%; padding: clamp(14px,1.8vw,20px);
+  display:grid; gap:10px; align-content:end;
+}
+.dp-card__overlay h4{ margin:0 0 4px 0; font:700 18px/1.2 Inter,system-ui,sans-serif }
+.dp-card__bullets{ margin:0 0 10px 0; padding-left:18px; color:#d0d1d6; font-size:14px }
+.dp-card__overlay-cta{ justify-self:start }
+
+.dp-card__close{
+  position:absolute; top:8px; right:10px;
+  width:30px; height:30px; border-radius:50%;
+  border:1px solid #2a2a2f; background:#0c0c0e; color:#c9c9cf;
+  line-height:28px; font-size:18px; cursor:pointer;
+}
+
+/* Акцентен ореол около картата при hover – много деликатен */
+@media (hover:hover) and (pointer:fine){
+  .dp-card::after{
+    content:""; position:absolute; inset:-2px;
+    border-radius: inherit;
+    background: radial-gradient(100% 90% at 50% 0%,
+      #a7a7ad12 0%,
+      rgba(212,255,0,0) 55%);
+    opacity:0; transition: opacity .18s ease; pointer-events:none;
+  }
+  .dp-card:hover::after{ opacity:1 }
+}
+
+/* Детайли (за мобилно и клик) */
+.dp-card__morepanel{
+  border-top:1px solid #151518;
+  background:#09090c; padding: 10px 16px 14px 16px;
+}
+.dp-card__bullets{
+  margin:0; padding-left: 18px; color:#cfd0d4; font-size: 14px;
+}
+.dp-card__bullets li{ margin:6px 0 }
+
+.dp-card__more{
+  border-color:#2a2a2f;
+}
+
+/* ===== Responsive мрежа ===== */
+@media (max-width: 779px){
+  .dp-cards{ grid-template-columns: 1fr; }
+  .dp-card__body{ grid-template-columns: 36% 1fr; }
+}
+@media (min-width: 780px) and (max-width: 1199px){
+  .dp-cards{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1200px){
+  .dp-cards{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* безопасност – да не чупи мрежата */
+.dp-card{ min-width: 0; }
