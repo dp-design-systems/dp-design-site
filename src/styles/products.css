@@ -83,7 +83,7 @@
 
 /* Арт вдясно (контур в акцентни цветове) */
 .dp-card__art img{
-  height: clamp(206px, 12vw, 140px); width:auto; opacity:.9;
+  height: clamp(150px, 12vw, 140px); width:auto; opacity:.9;
   filter: drop-shadow(0 10px 24px rgb(112 112 130 / 0%));
   translate: 6px 0;
 }
