@@ -8,10 +8,10 @@
 }
 .dp-footer__logo{ width:44px; height:auto; margin-bottom:10px }
 .dp-footer__brand p{ color:#cfd0d6; margin:0 0 8px 0 }
-.dp-footer__cta{ color:#061102; background:var(--accent); border-radius:999px; padding:8px 14px; font-weight:800; text-decoration:none }
+.dp-footer__cta{color:#09090c;background: #d4ff00;border-radius:999px;padding:8px 14px;font-weight:800;text-decoration:none}
 .dp-footer__nav h4, .dp-footer__contact h4{ font-size:14px; color:#d0d1d6; margin:0 0 8px 0 }
 .dp-footer__nav ul, .dp-footer__contact ul{ list-style:none; padding:0; margin:0; display:grid; gap:6px }
-.dp-footer a{ color:#e9e9ea; text-decoration:none }
+.dp-footer a{/* color:#e9e9ea; *//* text-decoration:none; */}
 .dp-footer a:hover{ text-decoration:underline }
 .dp-footer__bottom{ border-top:1px solid var(--line); }
 .dp-footer__bottom-inner{
