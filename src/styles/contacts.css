@@ -1,0 +1,54 @@
+:root{ --bg:#000; --text:#e9e9ea; --muted:#a7a7ad; --line:#1a1a1d; --accent:#d4ff00; --container:clamp(320px,92vw,1440px); }
+.dp-container{ width:var(--container); margin:0 auto }
+
+.dp-contacts{ background:linear-gradient(180deg,#000,#050507); color:var(--text); }
+.dp-contacts__hero{
+  border-bottom:1px solid var(--line);
+  background: radial-gradient(1100px 500px at 85% 0%, #0b0b0e 0%, #040405 70%);
+}
+.dp-contacts__hero .dp-container{ padding: clamp(28px,5vw,64px) 0; }
+.dp-contacts__hero h1{ margin:0 0 6px 0; font:800 clamp(26px,4.5vw,42px)/1.05 Inter,sans-serif }
+.dp-contacts__hero p{ margin:0; color:var(--muted) }
+
+.dp-contacts__grid{
+  display:grid; gap: clamp(18px,3vw,32px);
+  grid-template-columns: 1fr 1.4fr;
+  padding: clamp(24px,4vw,48px) 0;
+}
+@media (max-width: 920px){
+  .dp-contacts__grid{ grid-template-columns:1fr; }
+}
+
+.dp-contacts__card{
+  border:1px solid var(--line); border-radius:18px; background:#0b0b0e;
+  padding: clamp(16px,2.6vw,24px);
+}
+.dp-contacts__card h3{ margin:12px 0 8px; font-size:16px; color:#cfd0d6 }
+.dp-contacts__card ul{ list-style:none; margin:0 0 12px 0; padding:0; color:#e9e9ea; display:grid; gap:6px }
+.dp-contacts__card a{ color:#e9e9ea; text-decoration:none } .dp-contacts__card a:hover{ text-decoration:underline }
+
+.dp-contacts__form{
+  border:1px solid var(--line); border-radius:18px; background:#0b0b0e;
+  padding: clamp(16px,2.6vw,24px); display:grid; gap:12px;
+}
+.dp-contacts__form .row{ display:grid; gap:12px; grid-template-columns:1fr 1fr }
+@media (max-width:680px){ .dp-contacts__form .row{ grid-template-columns:1fr } }
+
+.dp-contacts__form label{ display:grid; gap:6px; font-size:14px; color:#d0d1d6 }
+.dp-contacts__form input,
+.dp-contacts__form textarea{
+  background:#09090c; color:#e9e9ea; border:1px solid #1a1a1d; border-radius:12px;
+  padding:10px 12px; outline:none;
+}
+.dp-contacts__form input:focus,
+.dp-contacts__form textarea:focus{
+  border-color: color-mix(in oklab, var(--accent), #fff 10%);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent), #000 75%);
+}
+.dp-contacts__form .check{ display:flex; align-items:center; gap:8px; color:#cfd0d6 }
+.dp-contacts__form .btn{
+  border-radius:999px; border:1px solid #27272c; padding:10px 16px; font-weight:800;
+  background:linear-gradient(180deg, color-mix(in oklab, var(--accent), #fff 6%) 0%, var(--accent) 100%);
+  color:#061102; cursor:pointer;
+}
+.form-note{ margin:6px 0 0 0; font-size:13px }
