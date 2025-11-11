@@ -100,9 +100,10 @@
 /* Мобилен layout — текстът е водещ; спиралата остава фон, не „избутва“ съдържанието */
 @media (max-width: 660px){
   .dp-hero__art{
-    margin-right: -70px;
-    width: auto;
-    height: min(155vw, 800px); pointer-events:none; user-select:none;
+    margin-right: -15px;
+    width: 95%; pointer-events:none; user-select:none;
+    /*outline: 1px solid red;*/
+    height: auto;
     transform: translateY(-48%);
     opacity:.9;
   }
