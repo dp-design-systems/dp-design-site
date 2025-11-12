@@ -51,6 +51,148 @@ summary .title{font-weight:600}
 /* Focus visible general */
 :focus-visible{outline:2px solid rgba(212,255,0,.6);outline-offset:2px;border-radius:10px}
 
+/* ================ FOLDS (COLLAPSIBLE BLOCKS) ================ */
+
+.fold-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fold {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(12, 12, 16, 0.9);
+  overflow: hidden;
+  transition: background 180ms ease-out, border-color 180ms ease-out;
+}
+
+.fold__head {
+  width: 100%;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.fold__title {
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.fold__chev {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  transform: rotate(0deg);
+  transition: transform 160ms ease-out, background 160ms ease-out, border-color 160ms ease-out;
+}
+
+.fold__chev::before {
+  content: "⌄";
+  transform: translateY(-1px);
+}
+
+.fold__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 220ms ease-out;
+}
+
+.fold__inner {
+  padding: 0 14px 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.fold--open {
+  background: radial-gradient(circle at top left, rgba(212, 255, 0, 0.12), rgba(5, 5, 8, 0.98));
+  border-color: rgba(212, 255, 0, 0.35);
+}
+
+.fold--open .fold__chev {
+  transform: rotate(180deg);
+  border-color: rgba(212, 255, 0, 0.75);
+  background: rgba(212, 255, 0, 0.12);
+}
+
+/* ================ OVERLAY (PILLAR DETAILS) ================ */
+
+.overlay-open {
+  overflow: hidden;
+}
+
+.overlay[data-overlay] {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 80;
+}
+
+.overlay[hidden] {
+  display: none;
+}
+
+.overlay__panel {
+  max-width: 640px;
+  width: 100%;
+  border-radius: 18px;
+  background: radial-gradient(circle at top left, rgba(212, 255, 0, 0.08), #050507);
+  border: 1px solid var(--line);
+  padding: 20px 20px 18px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9);
+  position: relative;
+}
+
+.overlay__title {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.overlay__body {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.overlay__body ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.overlay__close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* ================ UTILITIES ================ */
+
+.text-accent {
+  color: var(--accent);
+}
+
+
 /* Reduced motion */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
