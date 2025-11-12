@@ -68,7 +68,7 @@ a{color:inherit; text-decoration:none}
 .edges--right{right:0; background:linear-gradient(270deg, #0a0a0c 0%, transparent 100%)}
 
 /* секции */
-.section{padding: clamp(40px, 6vw, 96px) 0; background:linear-gradient(180deg, transparent, #050507)}
+.section{padding: clamp(40px, 6vw, 96px) 0; background:linear-gradient(180deg, transparent, #000)}
 .section--alt{background:linear-gradient(180deg, #050507, #09090c)}
 
 /* cards grid: на 4K ще стават големи и четими */
