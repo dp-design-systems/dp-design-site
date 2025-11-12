@@ -46,9 +46,19 @@ summary .title{font-weight:600}
 .usecase__content{color:#cfd0da;margin-top:10px}
 
 /* Animations */
-[data-animate]{opacity:0;transform:translateY(8px);transition:opacity .45s ease,transform .45s ease}
-[data-animate].in-view{opacity:1;transform:none}
-[data-animate="float"]{animation:float 8s ease-in-out infinite;opacity:1;transform:none}
+[data-animate]{
+  transform:translateY(8px);
+  transition:opacity .45s ease,transform .45s ease
+}
+[data-animate].in-view{
+  opacity:1;
+  transform:none
+}
+[data-animate="float"]{
+  animation:float 8s ease-in-out infinite;
+  opacity:1;
+  transform:none
+}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 
 /* Cards media */
