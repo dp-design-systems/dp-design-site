@@ -1,0 +1,43 @@
+<!-- components/demos/pilot-configurator.html -->
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DP Pilot Demo (Placeholder)</title>
+  <style>
+    :root{ --bg:#0b0b0e; --text:#e7e7ea; --muted:#a5a6b0; --line:#2a2a33; }
+    html,body{height:100%}
+    body{margin:0; background:var(--bg); color:var(--text); font:14px/1.45 system-ui,Segoe UI,Roboto,Inter,sans-serif; display:grid; place-items:center;}
+    .wrap{max-width:960px; width:92vw; padding:24px; border:1px solid var(--line); border-radius:16px; background:#101014}
+    h1{font-size:16px; margin:0 0 10px}
+    p{margin:0 0 12px; color:var(--muted)}
+    .grid{display:grid; gap:12px; grid-template-columns: 1fr 2fr}
+    .panel{border:1px solid var(--line); border-radius:12px; padding:12px}
+    label{display:block; font-size:12px; color:var(--muted); margin-bottom:6px}
+    input,select{width:100%; background:#0f0f13; color:var(--text); border:1px solid var(--line); border-radius:8px; padding:8px}
+    .viewer{aspect-ratio:16/9; background:#0f0f13; display:grid; place-items:center; border:1px dashed var(--line); border-radius:12px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>DP Pilot Demo Configurator</h1>
+    <p>Това е локален fallback. Истинското демо ще дойде от GitHub Pages репо. Тук показваме принципа: параметри вляво, преглед вдясно.</p>
+    <div class="grid">
+      <div class="panel">
+        <label>Дължина (mm)</label>
+        <input type="number" value="5000" min="1000" max="12000" step="100" />
+        <label style="margin-top:10px">Ширина (mm)</label>
+        <input type="number" value="2400" min="1800" max="3000" step="50" />
+        <label style="margin-top:10px">Опции</label>
+        <select>
+          <option>Standard</option>
+          <option>Reinforced</option>
+          <option>Lightweight</option>
+        </select>
+      </div>
+      <div class="viewer">GLB Viewer placeholder</div>
+    </div>
+  </div>
+</body>
+</html>
