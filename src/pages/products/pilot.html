@@ -9,20 +9,24 @@
   <!-- Favicon -->
   <link rel="icon" href="/assets/logo/favicon.svg" type="image/svg+xml">
 
-  <!-- Styles -->
+  <!-- GLOBAL STYLES -->
+  <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/navbar.css" />
+  <link rel="stylesheet" href="/styles/hero.css" />
+
+  <!-- PRODUCT PAGE STYLES -->
   <link rel="stylesheet" href="/styles/product.css" />
   <link rel="stylesheet" href="/styles/footer.css" />
 
-  <!-- Loaders -->
+  <!-- Shared header/footer loaders -->
   <script type="module" src="/scripts/header-loader.js"></script>
   <script type="module" src="/scripts/footer-loader.js"></script>
 
-  <!-- Page script -->
+  <!-- Page-specific script -->
   <script type="module" src="/scripts/pilot.js"></script>
 </head>
 
-<body class="product-page product-pilot">
+<body class="theme-dark product-page product-pilot">
 
   <!-- Header -->
   <header id="app-header"></header>
@@ -90,7 +94,7 @@
 
         <div class="fold-group" style="margin-top:14px">
 
-          <!-- Fold 1 (Open by default) -->
+          <!-- Fold 1 (open by default) -->
           <div class="fold" data-open="true" data-desktop-default="open">
             <button class="fold__head" type="button" aria-expanded="true">
               <span class="fold__title"><span class="text-accent">Configure</span> — параметри и правила</span>
