@@ -3,8 +3,16 @@
 /* Buttons */.btn{--_h:48px;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;height:var(--_h);padding:0 18px;border-radius:calc(var(--radius-sm));border:1px solid transparent;font-weight:600;letter-spacing:.2px;transition:transform .16s ease,box-shadow .16s ease,background .16s ease,border-color .16s ease;cursor:pointer;outline:none}.btn:focus-visible{box-shadow:0 0 0 3px rgba(212,255,0,.35)}.btn:active{transform:translateY(1px)}.btn-primary{color:#111;background:linear-gradient(135deg,var(--accent),#f5ff7a 60%,var(--accent));text-shadow:0 1px 0 rgba(255,255,255,.25);box-shadow:var(--shadow),0 0 22px rgba(212,255,0,.25)}.btn-primary:hover{box-shadow:var(--shadow),0 0 36px rgba(212,255,0,.35)}.btn-ghost{background:transparent;border-color:var(--line);color:var(--text)}.btn-ghost:hover{border-color:#2b2b3a;background:rgba(255,255,255,.02)}.btn-ghost:active{background:rgba(255,255,255,.04)}
 /* Eyebrow */.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.78rem;color:var(--muted);margin:0 0 8px}
 /* HERO */.hero{padding-top:clamp(32px,5vw,96px)}.hero__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(20px,3vw,40px);align-items:center}
-.hero__copy{display:flex;flex-direction:column;gap:16px}
-.hero__title{font-size:clamp(36px,6.2vw,64px);line-height:1.08;margin:0}
+.hero__copy{
+  display:flex;
+  flex-direction:column;
+  gap:16px
+}
+.hero__title{
+  font-size:clamp(36px,6.2vw,64px);
+  line-height:1.08;
+  margin:0
+}
 .hero__subtitle{color:var(--muted);font-size:clamp(16px,2.2vw,18px);max-width:60ch;margin:0}
 .hero__cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
 .hero__bullets{padding:0;margin:10px 0 0;list-style:none;display:grid;gap:8px}
