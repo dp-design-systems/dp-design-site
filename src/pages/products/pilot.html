@@ -6,19 +6,21 @@
   <title>DP Design Pilot – Инженер 24/7</title>
   <meta name="description" content="DP Design Pilot – платформа за автоматизирано конфигуриране, чертане и експорт на инженерна документация (DXF / PDF / STEP)." />
 
-  <!-- Favicon (per structure confirmation) -->
-  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/logo/favicon.svg" type="image/svg+xml" />
 
-  <!-- Product page styles -->
+  <!-- Base styles -->
   <link rel="stylesheet" href="/styles/product.css" />
+  <link rel="stylesheet" href="/styles/navbar.css" />
+  <link rel="stylesheet" href="/styles/footer.css" />
 
-  <!-- Shared header/footer loaders -->
-  <link rel="stylesheet" href="/styles/navbar.css">
+  <!-- Shared loaders -->
   <script type="module" src="/scripts/header-loader.js"></script>
-  <link rel="stylesheet" href="/styles/footer.css">
   <script type="module" src="/scripts/footer-loader.js"></script>
+  <!-- Page logic -->
+  <script type="module" src="/scripts/pilot.js"></script>
 </head>
-<body class="product-page product-pilot">
+<body class="product-page product-pilot theme-dark">
   <!-- Header (injected) -->
   <header id="app-header"></header>
 
@@ -47,56 +49,218 @@
           </ul>
         </div>
 
-        <!-- Visual (video with poster; assets listed in the screenshot) -->
+        <!-- Visual -->
         <div class="hero__visual" data-animate="float">
           <figure class="hero__media" aria-label="Динамична визуализация на DP Design Pilot">
-            <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="../../assets/pilot/hero-poster.png">
-            <source src="../../assets/pilot/hero-loop.mp4" type="video/mp4" />
+            <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="/assets/pilot/hero-poster.png">
+              <source src="/assets/pilot/hero-loop.mp4" type="video/mp4" />
             </video>
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- ===================== MEDIA ===================== -->
+    <!-- ===================== INTRO ===================== -->
+    <section id="intro" class="section" aria-labelledby="intro-title">
+      <div class="container">
+        <h2 id="intro-title" class="section-title">Какво представлява DP Design Pilot?</h2>
+        <p class="section-subtitle">Модулна платформа за параметрично конфигуриране на продукти, автоматично валидиране и пакетен експорт на инженерна документация. Работи локално или в облак, с кеширани 3D прегледи и интеграция към вашите процеси.</p>
+        <ul class="hero__bullets" style="margin-top:12px">
+          <li><strong>Configure:</strong> параметри, правила и зависимости</li>
+          <li><strong>Validate:</strong> стандарти, дебелини, радиуси и ограничения</li>
+          <li><strong>Export:</strong> DXF / PDF / STEP – именуване и структура по правила</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== WHY AUTOMATION FOR EVERYONE ===================== -->
+    <section id="why-automation" class="section" aria-labelledby="why-title">
+      <div class="container">
+        <h2 id="why-title" class="section-title">Автоматизацията не е само за големите</h2>
+        <p class="section-subtitle">Правим инженерната автоматизация достъпна за малки и средни производители. Спестявате време, разходи и най-важното – грешки от ръчни операции.</p>
+        <div class="media__grid" style="margin-top:12px">
+          <article class="card media__item"><div class="card__media" style="padding:16px"><h3 style="margin:0 0 6px">Повтаряемост без грешки</h3><p class="section-subtitle">Документацията се генерира автоматично – без пропуски от копиране и ръчно въвеждане.</p></div></article>
+          <article class="card media__item"><div class="card__media" style="padding:16px"><h3 style="margin:0 0 6px">Икономия на време и разход</h3><p class="section-subtitle">От вариация до готови чертежи – минути вместо часове. Инженерите ви се фокусират върху развитие.</p></div></article>
+          <article class="card media__item"><div class="card__media" style="padding:16px"><h3 style="margin:0 0 6px">Стандартизация</h3><p class="section-subtitle">Единни шаблони, наименования и структура на файловете – всеки път.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LEAP: 2D/VDE → 3D AUTOMATION ===================== -->
+    <section id="leap" class="section" aria-labelledby="leap-title">
+      <div class="container">
+        <h2 id="leap-title" class="section-title">Прескочи 2D/VDE. Влез директно в 3D автоматизация.</h2>
+        <p class="section-subtitle">Ние сме вашият външен „проектантски отдел“: конфигурираме продуктите, стандартизираме документацията и генерираме DXF/PDF/STEP автоматично.</p>
+        <div class="media__grid" style="margin-top:14px">
+          <article class="card media__item"><div class="card__media" style="padding:16px"><h3 style="margin:0 0 6px">По-малко грешки</h3><p class="section-subtitle">Валидиращи правила → елиминираме човешките пропуски при рутинни операции.</p></div></article>
+          <article class="card media__item"><div class="card__media" style="padding:16px"><h3 style="margin:0 0 6px">Време и разход</h3><p class="section-subtitle">От вариация до готови чертежи – минути вместо часове. По-ниска цена на документ.</p></div></article>
+          <article class="card media__item"><div class="card__media" style="padding:16px"><h3 style="margin:0 0 6px">Стандартизация</h3><p class="section-subtitle">Единна структура, именуване и шаблони.</p></div></article>
+        </div>
+        <div class="section-head" style="margin-top:22px"><h3 class="section-title" style="font-size:1.25rem">Как става преходът</h3></div>
+        <ol class="hero__bullets" style="margin-top:8px">
+          <li><strong>Аудит:</strong> преглед на текущи 2D/VDE файлове, правила, диапазони.</li>
+          <li><strong>3D Uplift:</strong> параметрични модели + iLogic/Bridge логика, шаблони за експорт.</li>
+          <li><strong>Автоматизация:</strong> конфигуратор → валидиране → DXF/PDF/STEP + GLB кеш.</li>
+        </ol>
+        <div class="card media__item media__item--video" style="grid-column:span 12; padding:0; margin-top:16px">
+          <div style="overflow:auto">
+            <table style="width:100%; border-collapse:collapse; min-width:720px">
+              <thead>
+                <tr style="background:rgba(255,255,255,.02)">
+                  <th style="text-align:left; padding:12px 14px; border-bottom:1px solid var(--line)">Критерий</th>
+                  <th style="text-align:left; padding:12px 14px; border-bottom:1px solid var(--line)">2D/VDE процес</th>
+                  <th style="text-align:left; padding:12px 14px; border-bottom:1px solid var(--line)">DP Pilot автоматизация</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td style="padding:10px 14px; border-bottom:1px solid var(--line)">Време на вариация</td><td style="padding:10px 14px; border-bottom:1px solid var(--line)">часове/ден</td><td style="padding:10px 14px; border-bottom:1px solid var(--line)"><strong>минути</strong></td></tr>
+                <tr><td style="padding:10px 14px; border-bottom:1px solid var(--line)">Грешки</td><td style="padding:10px 14px; border-bottom:1px solid var(--line)">чести при ръчни операции</td><td style="padding:10px 14px; border-bottom:1px solid var(--line)"><strong>валидирани правила</strong> и шаблони</td></tr>
+                <tr><td style="padding:10px 14px; border-bottom:1px solid var(--line)">Стандартизация</td><td style="padding:10px 14px; border-bottom:1px solid var(--line)">несъответствия между екипи</td><td style="padding:10px 14px; border-bottom:1px solid var(--line)"><strong>единна структура</strong> и именуване</td></tr>
+                <tr><td style="padding:10px 14px; border-bottom:1px solid var(--line)">Мащабируемост</td><td style="padding:10px 14px; border-bottom:1px solid var(--line)">трудна при много варианти</td><td style="padding:10px 14px; border-bottom:1px solid var(--line)"><strong>хиляди вариации</strong> с обща логика</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <figcaption class="card__caption">С Pilot прескачате 2D/VDE и влизате в ерата на параметричното 3D и автоматичния експорт.</figcaption>
+        </div>
+        <div class="hero__cta" style="margin-top:16px">
+          <a class="btn btn-primary" href="/checkout.html?product=dp-pilot-migration">Искам оценка за миграция</a>
+          <a class="btn btn-ghost" href="mailto:hello@dpdesign.systems?subject=DP%20Pilot%20-%20Migration%20Audit">Попитай за Audit</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONFIGURATION EXPLOSION ===================== -->
+    <section id="config-scope" class="section" aria-labelledby="config-title">
+      <div class="container">
+        <h2 id="config-title" class="section-title">Конфигурационна експлозия: малко опции → милиони варианти</h2>
+        <p class="section-subtitle">На пръв поглед „2–3 размера и няколко опции“. На практика — милиони комбинации. Ние не се плашим от числата – подчиняваме ги с правила, валидиране и кеш.</p>
+        <div class="media__grid" style="margin-top:12px">
+          <article class="card media__item"><div class="card__media" style="padding:16px"><h3 style="margin:0 0 6px">10 опции × 5 варианта</h3><p class="section-subtitle"><strong>9 765 625</strong> конфигурации (5^10)</p></div></article>
+          <article class="card media__item"><div class="card__media" style="padding:16px"><h3 style="margin:0 0 6px">15 опции × 3 варианта</h3><p class="section-subtitle"><strong>14 348 907</strong> конфигурации (3^15)</p></div></article>
+          <article class="card media__item"><div class="card__media" style="padding:16px"><h3 style="margin:0 0 6px">20 опции × 4 варианта</h3><p class="section-subtitle"><strong>1 099 511 627 776</strong> конфигурации (4^20)</p></div></article>
+        </div>
+        <!-- Placeholder iframe (fallback-ready) -->
+        <div class="card media__item media__item--video" style="grid-column:span 12; padding:0; margin-top:16px">
+          <div class="card__media ratio-16x9">
+            <iframe id="config-calc-frame" src="/components/widgets/config-scope.html" title="Configuration Scope Calculator" loading="lazy"></iframe>
+          </div>
+          <figcaption class="card__caption">Мини-калкулаторът показва реалния мащаб на конфигурациите. Ако външният източник липсва, зареждаме локален fallback.</figcaption>
+        </div>
+        <ul class="hero__bullets" style="margin-top:12px">
+          <li><strong>Правила и зависимости:</strong> забраняваме нелегитимни комбинации.</li>
+          <li><strong>Валидиране:</strong> дебелини, радиуси, стандарти – автоматични проверки.</li>
+          <li><strong>Кеш:</strong> GLB/DXF/PDF не се преизчисляват излишно.</li>
+          <li><strong>Пакетни експорти:</strong> правилни файлове и имена – всеки път.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== PILLARS (Modules) ===================== -->
+    <section id="pillars" class="section" aria-labelledby="pillars-title">
+      <div class="container">
+        <h2 id="pillars-title" class="section-title">Основни стълбове</h2>
+        <p class="section-subtitle">Клик върху карта отваря детайли без да мести останалото съдържание.</p>
+        <div class="media__grid" style="margin-top:12px">
+          <article class="card media__item"><div class="card__media" style="padding:16px"><h3 style="margin:0 0 6px">Frontend конфигуратори</h3><p class="section-subtitle">Web UI с параметри, правила и live преглед.</p><button class="btn btn-ghost" data-open="dlg-frontend">Виж детайли</button></div></article>
+          <article class="card media__item"><div class="card__media" style="padding:16px"><h3 style="margin:0 0 6px">Inventor автоматизация</h3><p class="section-subtitle">iLogic + външен Bridge за DXF/PDF/STEP.</p><button class="btn btn-ghost" data-open="dlg-inventor">Виж детайли</button></div></article>
+          <article class="card media__item"><div class="card__media" style="padding:16px"><h3 style="margin:0 0 6px">Експорти и кеш</h3><p class="section-subtitle">Пакетни DXF/PDF, GLB кеш, ускорени прегледи.</p><button class="btn btn-ghost" data-open="dlg-exports">Виж детайли</button></div></article>
+        </div>
+      </div>
+      <!-- Modals -->
+      <dialog id="dlg-frontend" class="dp-modal"><h3>Frontend конфигуратори</h3><p>React/Vite UI с параметри, валидиращи правила и опционален 3D viewer. Ние пипаме логиката/UX; клиентът управлява опции/етикети чрез JSON, без нужда от код.</p><form method="dialog"><button class="btn btn-primary">Затвори</button></form></dialog>
+      <dialog id="dlg-inventor" class="dp-modal"><h3>Inventor автоматизация</h3><p>iLogic + външен Python/COM “Inventor Bridge”. Стабилен export pipeline (DXF/PDF/STEP), обновяване на превюта при Save и правила за дебелини, BOM количества и шаблони.</p><form method="dialog"><button class="btn btn-primary">Затвори</button></form></dialog>
+      <dialog id="dlg-exports" class="dp-modal"><h3>Експорти и кеш</h3><p>GLB кеш за бърз viewer, пакетни експорти, именуване по правила и структура на папки. Готово за CI/Jobs.</p><form method="dialog"><button class="btn btn-primary">Затвори</button></form></dialog>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section id="process" class="section" aria-labelledby="process-title">
+      <div class="container">
+        <h2 id="process-title" class="section-title">Как работим</h2>
+        <ol class="hero__bullets" style="margin-top:12px">
+          <li>Откриваща среща – продукт, параметри, ограничения.</li>
+          <li>Подготовка – модели, iLogic правила, export шаблони.</li>
+          <li>Интеграция – UI конфигуратор + Inventor Bridge.</li>
+          <li>Качване – кеш, права, демо акаунт.</li>
+          <li>Приемни тестове – корекции, документация, обучение.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== ONBOARDING ===================== -->
+    <section id="onboarding" class="section" aria-labelledby="onboarding-title">
+      <div class="container">
+        <h2 id="onboarding-title" class="section-title">Какво е нужно, за да качим вашия продукт</h2>
+        <ul class="hero__bullets" style="margin-top:12px">
+          <li>Референтни модели/чертежи и допустими диапазони на параметри.</li>
+          <li>Правила за валидиране (напр. дебелини, стандарти, радиуси).</li>
+          <li>Именуване и структура за DXF/PDF/STEP файлове.</li>
+          <li>Бранд/шаблони за чертежи (логотипи, title block).</li>
+          <li>Контакт за ревю и бързи решения при неясноти.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== MEDIA (kept) ===================== -->
     <section id="media" class="section media" aria-labelledby="media-title">
       <div class="container">
         <div class="section-head">
           <h2 id="media-title" class="section-title">Видео и визуализации</h2>
-          <p class="section-subtitle">
-            Вижте DP Pilot в действие – реални конфигурации, автоматизирани експорти и прегледи в браузър.
-          </p>
+          <p class="section-subtitle">Вижте DP Pilot в действие – реални конфигурации, автоматизирани експорти и прегледи в браузър.</p>
         </div>
-
         <div class="media__grid">
-          <!-- Primary video (external demo, keep as placeholder) -->
           <figure class="card media__item media__item--video" data-animate="fade-in" aria-label="Демо видео – от параметри до DXF/PDF">
             <div class="card__media ratio-16x9">
               <iframe class="yt" src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1" title="DP Design Pilot – Demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
             <figcaption class="card__caption">Демо: параметризиране → валидиране → DXF/PDF/STEP</figcaption>
           </figure>
-
-          <!-- Image previews – filenames per your confirmation -->
           <figure class="card media__item" data-animate="fade-in" aria-label="GLB – 3D преглед в браузър">
-            <img src="../../assets/pilot/glb-preview.png" alt="GLB преглед на конфигуриран модел" loading="lazy" />
+            <img src="/assets/pilot/glb-preview.png" alt="GLB преглед на конфигуриран модел" loading="lazy" />
             <figcaption class="card__caption">GLB преглед – интерактивно въртене на модела</figcaption>
           </figure>
-
           <figure class="card media__item" data-animate="fade-in" aria-label="DXF – пакетен експорт">
-            <img src="../../assets/pilot/dxf-batch.png" alt="Екран на пакетен DXF експорт с правила за дебелина" loading="lazy" />
+            <img src="/assets/pilot/dxf-batch.png" alt="Екран на пакетен DXF експорт с правила за дебелина" loading="lazy" />
             <figcaption class="card__caption">DXF – правила за дебелини, количества по BOM</figcaption>
           </figure>
-
           <figure class="card media__item" data-animate="fade-in" aria-label="PDF – автоматичен експорт">
-            <img src="../../assets/pilot/pdf-export.png" alt="Екран на автоматичен PDF експорт с прогрес" loading="lazy" />
+            <img src="/assets/pilot/pdf-export.png" alt="Екран на автоматичен PDF експорт с прогрес" loading="lazy" />
             <figcaption class="card__caption">PDF – автоматичен експорт с прогрес и шаблони</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <!-- (Следващи секции ще добавим последователно): Use Cases, Pricing/CTA -->
+    <!-- ===================== DEMO CONFIGURATOR (embedded) ===================== -->
+    <section id="demo" class="section" aria-labelledby="demo-title">
+      <div class="container">
+        <h2 id="demo-title" class="section-title">Демо конфигуратор</h2>
+        <p class="section-subtitle">Вграден от отделно GitHub репо. Ако е недостъпно, показваме локален fallback.</p>
+        <div class="card media__item media__item--video" style="grid-column:span 12; padding:0">
+          <div class="card__media ratio-16x9">
+            <iframe id="demo-frame" src="https://example.com/demo" title="DP Pilot Demo Configurator" loading="lazy"></iframe>
+          </div>
+          <figcaption class="card__caption">Demo UI от GitHub Pages. <a href="#" id="demo-download">Изтегли примерни файлове (ZIP)</a></figcaption>
+        </div>
+        <!-- Fallback шаблон, ако външният iframe не е достъпен -->
+        <template id="demo-fallback">
+          <div class="card__media ratio-16x9" style="display:grid;place-items:center">
+            <p class="section-subtitle" style="text-align:center">Очаквайте демо компонента тук. Можем да инжектираме /components/demos/pilot-configurator.html.</p>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section id="final-cta" class="section" aria-labelledby="final-cta-title">
+      <div class="container" style="text-align:center">
+        <h2 id="final-cta-title" class="section-title">Готови ли сте да качим вашия продукт?</h2>
+        <p class="section-subtitle">Ще адаптираме конфигуратора към вашия продукт, бранд и процес.</p>
+        <div class="hero__cta" style="justify-content:center;margin-top:10px">
+          <a class="btn btn-primary" href="/checkout.html?product=dp-pilot">Subscribe</a>
+          <a class="btn btn-ghost" href="mailto:hello@dpdesign.systems?subject=DP%20Pilot%20-%20Връзка">Свържете се с нас</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer (injected) -->
