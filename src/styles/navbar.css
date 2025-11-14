@@ -115,7 +115,7 @@
 /* RESPONSIVE BEHAVIOUR */
 @media (max-width: 620px){
   .dp-search__form{display:none}          /* скриваме input */
-  .dp-search-icon{display:flex}           /* показваме лупа */
+  .dp-search-icon{display:none}           /* показваме лупа */
 }
 @media (max-width: 720px){
   .dp-primary{display:none}               /* няма навигация в mainbar */
