@@ -36,7 +36,7 @@
 .dp-search{display:flex; align-items:center; gap:10px}
 .dp-search__form{display:block}
 .dp-search input{
-  width:min(42vw, 200px);
+  width:min(42vw, 300px);
   background:var(--bg-graphite); color:var(--text);
   border:1px solid var(--border); border-radius:8px;
   padding:5px 10px; outline:none;
